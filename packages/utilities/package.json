@@ -1,0 +1,12 @@
+{
+  "name": "@vite-monorepo-example/utilities",
+  "version": "1.0.0",
+  "module": "src/index.js",
+  "main": "dist/@vite-monorepo-example/utilities.umd.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+  }
+}

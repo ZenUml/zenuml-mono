@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "packages/utilities",
+    "packages/model",
+    "packages/ui",
+    "packages/api"
+  ],
+  "version": "1.0.0"
+}
