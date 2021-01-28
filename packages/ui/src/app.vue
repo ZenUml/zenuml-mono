@@ -1,7 +1,7 @@
 <script>
 import HelloComponent from './components/hello.vue'
 import ClockComponent from './components/clock.vue'
-import { Contact } from '@vite-monorepo-example/model'
+import { APIClient } from './services'
 
 export default {
   components: {
@@ -11,12 +11,19 @@ export default {
 
   data () {
     return {
-      contact: new Contact({
-        id: 1,
-        firstName: 'John',
-        lastName: 'Doe'
-      })
+      contacts: [],
     }
+  },
+
+  computed: {
+    contact () {
+      const index = Math.floor(Math.random() * 3)
+      return this.contacts[index]
+    }
+  },
+
+  async created () {
+    this.contacts = await APIClient.getContacts()
   }
 }
 
@@ -25,7 +32,7 @@ export default {
 <template>
 
   <main>
-    <app-hello :contact="contact" />
+    <app-hello v-if="contact" :contact="contact" />
   </main>
 
   <footer>

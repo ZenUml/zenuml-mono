@@ -1,7 +1,7 @@
 {
   "packages": [
-    "packages/utilities",
-    "packages/model",
+    "packages/common/utilities",
+    "packages/common/model",
     "packages/ui",
     "packages/api"
   ],

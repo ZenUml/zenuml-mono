@@ -4,7 +4,7 @@ import pkg from '../package.json'
 import routes from './routes'
 
 // Initialize fastify application
-console.log(`API ${pkg.name} v.${pkg.version}`)
+console.log(`API ${pkg.name} v.${pkg.version}, ${new Date().toLocaleTimeString()}`)
 const app = fastify()
 app.register(fastifyCORS, { origin: '*' })
 

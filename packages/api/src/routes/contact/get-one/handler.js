@@ -1,14 +1,10 @@
 import { Contact } from '@vite-monorepo-example/model'
+import data from '../../../../data/contacts.json'
 
 export async function handler ({ params }, reply) {
   const { id } = params
 
-  const contacts = [
-    new Contact({ id: 1, firstName: 'Bob', lastName: 'Marley' }),
-    new Contact({ id: 2, firstName: 'Mary', lastName: 'Stanley' }),
-    new Contact({ id: 3, firstName: 'John', lastName: 'Doe' })
-  ]
-
+  const contacts = data.map(item => new Contact(item))
   const contact = contacts.find(c => c.id === id)
 
   if (contact) {

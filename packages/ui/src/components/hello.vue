@@ -10,24 +10,36 @@ export default {
     }
   },
 
-  methods: {
-    capitalize
+  setup () {
+    return {
+      capitalize
+    }
   }
 }
 </script>
 
 
 <template>
-  <h1>Hello, {{ capitalize(contact.fullName) }}!</h1>
+  <main>
+    <h1>Hello, {{ capitalize(contact.fullName) }}!</h1>
+    <h3>{{ capitalize('welcome to vite + vue + lerna experiment') }}</h3>
+  </main>
 </template>
 
 
 <style scoped lang="scss">
-h1 {
-  color: #205c41;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  &:hover {
-    color: #550d19;
+  h1, h3 {
+    color: #205c41;
+
+    &:hover {
+      color: #550d19;
+    }
   }
 }
 </style>
