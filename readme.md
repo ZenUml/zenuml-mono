@@ -1,4 +1,3 @@
 # Steps
-npm init
-npm install lerna --dev
-npx lerna init
+npm install
+npm run initialize
