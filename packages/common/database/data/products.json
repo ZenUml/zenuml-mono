@@ -1,0 +1,30 @@
+[
+  {
+    "id": 19922234,
+    "code": "RPX100",
+    "name": "RPX 100",
+    "producer": "Rollei",
+    "category": "film"
+  },
+  {
+    "id": 19922235,
+    "code": "RPX400",
+    "name": "RPX 400",
+    "producer": "Rollei",
+    "category": "film"
+  },
+  {
+    "id": 19922236,
+    "code": "DELTA100",
+    "name": "Delta 100",
+    "producer": "Ilford",
+    "category": "film"
+  },
+  {
+    "id": 19922237,
+    "code": "DDX",
+    "name": "DDX",
+    "producer": "Ilford",
+    "category": "developer"
+  }
+]

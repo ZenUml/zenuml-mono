@@ -1,0 +1,14 @@
+{
+  "name": "@vite-monorepo-example/api.inventory",
+  "version": "1.0.0",
+  "main": "dist/@vite-monorepo-example/api.inventory.umd.js",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@vite-monorepo-example/utilities": "*",
+    "@vite-monorepo-example/model": "*",
+    "@vite-monorepo-example/database": "*"
+  }
+}

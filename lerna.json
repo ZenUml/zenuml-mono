@@ -2,8 +2,11 @@
   "packages": [
     "packages/common/utilities",
     "packages/common/model",
-    "packages/ui",
-    "packages/api"
+    "packages/common/database",
+    "packages/applets/customers/api",
+    "packages/applets/inventory/api",
+    "packages/application/ui",
+    "packages/application/api"
   ],
   "version": "1.0.0"
 }

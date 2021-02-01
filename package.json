@@ -6,9 +6,11 @@
     "initialize": "lerna clean --yes && lerna bootstrap",
     "clean": "lerna exec -- rm -rf dist",
     "build": "lerna run build",
-    "build:ui": "lerna run build --scope=@vite-monorepo-example/ui",
     "build:model": "lerna run build --scope=@vite-monorepo-example/model",
     "build:utilities": "lerna run build --scope=@vite-monorepo-example/utilities",
+    "build:database": "lerna run build --scope=@vite-monorepo-example/database",
+    "build:common": "npm run build:utilities && npm run build:model && npm run build:database",
+    "build:ui": "lerna run build --scope=@vite-monorepo-example/ui",
     "build:api": "lerna run build --scope=@vite-monorepo-example/api",
     "dev:ui": "lerna run dev --stream --scope=@vite-monorepo-example/ui",
     "dev:api": "lerna run dev --stream --scope=@vite-monorepo-example/api"

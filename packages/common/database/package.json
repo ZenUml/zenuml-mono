@@ -1,0 +1,14 @@
+{
+  "name": "@vite-monorepo-example/database",
+  "version": "1.0.0",
+  "module": "src/index.js",
+  "main": "dist/@vite-monorepo-example/database.umd.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@vite-monorepo-example/utilities": "*",
+    "@vite-monorepo-example/model": "*"
+  }
+}
