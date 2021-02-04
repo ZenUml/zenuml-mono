@@ -1,4 +1,4 @@
-import { Customer, Product } from '@vite-monorepo-example/model'
+import { Customer, Product } from '@vue-vite-monorepo/model'
 import customerData from '../data/customers.json'
 import productData from '../data/products.json'
 

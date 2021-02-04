@@ -1,19 +1,20 @@
 {
-  "name": "vite-monorepo-example",
+  "name": "vue-vite-monorepo",
   "version": "1.0.0",
   "description": "Vue JS Monorepo with Lerna and Vite",
   "scripts": {
     "initialize": "lerna clean --yes && lerna bootstrap",
     "clean": "lerna exec -- rm -rf dist",
     "build": "lerna run build",
-    "build:model": "lerna run build --scope=@vite-monorepo-example/model",
-    "build:utilities": "lerna run build --scope=@vite-monorepo-example/utilities",
-    "build:database": "lerna run build --scope=@vite-monorepo-example/database",
-    "build:common": "npm run build:utilities && npm run build:model && npm run build:database",
-    "build:ui": "lerna run build --scope=@vite-monorepo-example/ui",
-    "build:api": "lerna run build --scope=@vite-monorepo-example/api",
-    "dev:ui": "lerna run dev --stream --scope=@vite-monorepo-example/ui",
-    "dev:api": "lerna run dev --stream --scope=@vite-monorepo-example/api"
+    "build:model": "lerna run build --scope=@vue-vite-monorepo/model",
+    "build:utilities": "lerna run build --scope=@vue-vite-monorepo/utilities",
+    "build:database": "lerna run build --scope=@vue-vite-monorepo/database",
+    "build:ui": "lerna run build --scope=@vue-vite-monorepo/ui",
+    "build:common": "npm run build:utilities && npm run build:model && npm run build:database && npm run build:ui",
+    "build:client": "lerna run build --scope=@vue-vite-monorepo/client",
+    "build:api": "lerna run build --scope=@vue-vite-monorepo/server",
+    "dev:client": "lerna run dev --stream --scope=@vue-vite-monorepo/client",
+    "dev:server": "lerna run dev --stream --scope=@vue-vite-monorepo/server"
   },
   "author": {
     "name": "Tomasz Waraksa",

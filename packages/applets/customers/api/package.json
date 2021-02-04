@@ -1,14 +1,14 @@
 {
-  "name": "@vite-monorepo-example/api.customers",
+  "name": "@vue-vite-monorepo/customers.api",
   "version": "1.0.0",
-  "main": "dist/@vite-monorepo-example/api.customers.umd.js",
+  "main": "dist/@vue-vite-monorepo/customers.api.umd.js",
   "module": "src/index.js",
   "scripts": {
     "build": "vite build"
   },
   "devDependencies": {
-    "@vite-monorepo-example/utilities": "*",
-    "@vite-monorepo-example/model": "*",
-    "@vite-monorepo-example/database": "*"
+    "@vue-vite-monorepo/utilities": "*",
+    "@vue-vite-monorepo/model": "*",
+    "@vue-vite-monorepo/database": "*"
   }
 }

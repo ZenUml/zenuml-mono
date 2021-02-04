@@ -2,7 +2,7 @@ export default {
   build: {
     lib: {
       entry: 'src/index.js',
-      name: 'api.inventory'
+      name: 'inventory.api'
     },
     rollupOptions: {
       external: [

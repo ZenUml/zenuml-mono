@@ -1,8 +1,9 @@
 {
-  "name": "@vite-monorepo-example/utilities",
+  "name": "@vue-vite-monorepo/utilities",
+  "description": "Shared utilities for all packages",
   "version": "1.0.0",
   "module": "src/index.js",
-  "main": "dist/@vite-monorepo-example/utilities.umd.js",
+  "main": "dist/@vue-vite-monorepo/utilities.umd.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"

@@ -1,6 +1,6 @@
 export const schema = {
   description: 'Returns a customer',
-  tags: ['Customer'],
+  tags: ['Customers'],
 
   params: {
     type: 'object',

@@ -2,7 +2,7 @@ export default {
   build: {
     lib: {
       entry: 'src/index.js',
-      name: 'api.customers'
+      name: 'customers.api'
     },
     rollupOptions: {
       external: [

@@ -1,4 +1,4 @@
-import { Database } from '@vite-monorepo-example/database'
+import { Database } from '@vue-vite-monorepo/database'
 
 export async function handler ({ params }, reply) {
   const database = await Database.open()

@@ -1,14 +1,15 @@
 {
-  "name": "@vite-monorepo-example/database",
+  "name": "@vue-vite-monorepo/database",
+  "description": "Database provider for back-end packages",
   "version": "1.0.0",
   "module": "src/index.js",
-  "main": "dist/@vite-monorepo-example/database.umd.js",
+  "main": "dist/@vue-vite-monorepo/database.umd.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
   "devDependencies": {
-    "@vite-monorepo-example/utilities": "*",
-    "@vite-monorepo-example/model": "*"
+    "@vue-vite-monorepo/utilities": "*",
+    "@vue-vite-monorepo/model": "*"
   }
 }
