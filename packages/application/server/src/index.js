@@ -2,7 +2,7 @@ import fastify from 'fastify'
 import fastifyCORS from 'fastify-cors'
 import fastifyOpenAPI from 'fastify-swagger'
 import pkg from '../package.json'
-import routes from './routes'
+import registerRoutes from './routes'
 import getDocumentationOptions from './documentation'
 
 // CONFIGURATION
@@ -10,7 +10,7 @@ const host = 'localhost'
 const port = 3333
 
 // APPLICATION
-console.log('-'.repeat(50))
+console.log('-'.repeat(60))
 console.log(`API Server ${pkg.name} v.${pkg.version}, ${new Date().toLocaleTimeString()}`)
 const app = fastify()
 
@@ -21,12 +21,9 @@ app.register(fastifyCORS, { origin: '*' })
 app.register(fastifyOpenAPI, getDocumentationOptions(host, port, '/documentation'))
 
 // ROUTES
-for (const route of routes) {
-  console.log(`> ${route.method} ${route.url}`)
-  app.route(route)
-}
+registerRoutes(app)
 console.log('> GET /documentation')
-console.log('-'.repeat(50))
+console.log('-'.repeat(60))
 
 // LISTEN
 const start = async () => {
