@@ -1,3 +1,3 @@
-import { getApplicationConfiguration } from '../../../build'
+import { getApplicationConfiguration } from '../../../configuration'
 
 export default getApplicationConfiguration()

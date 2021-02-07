@@ -1,3 +1,3 @@
-import { getClientConfiguration } from '../../../../build'
+import { getClientConfiguration } from '../../../../configuration'
 
 export default getClientConfiguration()

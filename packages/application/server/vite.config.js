@@ -1,3 +1,3 @@
-import { getServerConfiguration } from '../../../build'
+import { getServerConfiguration } from '../../../configuration'
 
 export default getServerConfiguration()
