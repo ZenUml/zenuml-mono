@@ -1,15 +1,4 @@
-export default {
-  build: {
-    lib: {
-      entry: 'src/index.js',
-      name: 'model'
-    },
-    rollupOptions: {
-      external: [],
-      output: {
-        globals: {
-        }
-      }
-    }
-  }
-}
+// This is a common (isomorphic) package which is intended to be used
+// on both server and client packages and applications
+import { getCommonConfiguration } from '../../../build'
+export default getCommonConfiguration()

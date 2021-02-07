@@ -3,12 +3,10 @@
   "description": "Database provider for back-end packages",
   "version": "1.0.0",
   "module": "src/index.js",
-  "main": "dist/@vue-vite-monorepo/database.umd.js",
   "scripts": {
-    "dev": "vite",
     "build": "vite build"
   },
-  "devDependencies": {
+  "dependencies": {
     "@vue-vite-monorepo/utilities": "*",
     "@vue-vite-monorepo/model": "*"
   }

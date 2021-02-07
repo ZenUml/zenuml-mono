@@ -3,16 +3,12 @@
   "version": "1.0.0",
   "description": "Vue JS Monorepo with Lerna and Vite",
   "scripts": {
-    "initialize": "lerna clean --yes && lerna bootstrap",
-    "clean": "lerna exec -- rm -rf dist",
-    "build": "lerna run build",
-    "build:model": "lerna run build --scope=@vue-vite-monorepo/model",
-    "build:utilities": "lerna run build --scope=@vue-vite-monorepo/utilities",
-    "build:database": "lerna run build --scope=@vue-vite-monorepo/database",
-    "build:ui": "lerna run build --scope=@vue-vite-monorepo/ui",
-    "build:common": "npm run build:utilities && npm run build:model && npm run build:database && npm run build:ui",
-    "build:client": "lerna run build --scope=@vue-vite-monorepo/client",
-    "build:api": "lerna run build --scope=@vue-vite-monorepo/server",
+    "clean": "lerna clean --yes && lerna exec -- rm -rf dist",
+    "initialize": "npm run clean && lerna bootstrap",
+    "refresh": "lerna bootstrap",
+    "build": "lerna run build --stream",
+    "build:client": "lerna run build --stream --scope=@vue-vite-monorepo/client",
+    "build:api": "lerna run build --stream --scope=@vue-vite-monorepo/server",
     "dev:client": "lerna run dev --stream --scope=@vue-vite-monorepo/client",
     "dev:server": "lerna run dev --stream --scope=@vue-vite-monorepo/server"
   },
@@ -28,8 +24,5 @@
     "lerna": "^3.22.1",
     "sass": "^1.32.5",
     "vite": "^2.0.0-beta.44"
-  },
-  "dependencies": {
-    "nodemon": "^2.0.7"
   }
 }

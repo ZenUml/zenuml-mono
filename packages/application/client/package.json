@@ -8,9 +8,7 @@
   },
   "dependencies": {
     "vue": "^3.0.5",
-    "vue-router": "^4.0.3"
-  },
-  "devDependencies": {
+    "vue-router": "^4.0.3",
     "@vue-vite-monorepo/model": "*",
     "@vue-vite-monorepo/utilities": "*",
     "@vue-vite-monorepo/ui": "*",

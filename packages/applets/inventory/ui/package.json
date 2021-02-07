@@ -3,15 +3,12 @@
   "description": "Inventory UI",
   "version": "1.0.0",
   "module": "src/index.js",
-  "main": "dist/@vue-vite-monorepo/inventory.ui.umd.js",
   "scripts": {
-    "dev": "vite",
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.5"
-  },
-  "devDependencies": {
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.3",
     "@vue-vite-monorepo/model": "*",
     "@vue-vite-monorepo/ui": "*",
     "@vue-vite-monorepo/utilities": "*"

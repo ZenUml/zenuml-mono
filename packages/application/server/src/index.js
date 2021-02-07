@@ -3,7 +3,7 @@ import fastifyCORS from 'fastify-cors'
 import fastifySwagger from 'fastify-swagger'
 import pkg from '../package.json'
 import routes from './routes'
-import documentation from './documentation'
+import getDocumentationOptions from './documentation'
 
 // Initialize fastify application
 console.log('-'.repeat(50))
@@ -12,7 +12,7 @@ const app = fastify()
 // Enables requests from UI running on another domain
 app.register(fastifyCORS, { origin: '*' })
 // Activates OpenAPI documentation at /documentation route
-app.register(fastifySwagger, documentation)
+app.register(fastifySwagger, getDocumentationOptions('localhost', 3333, '/documentation'))
 
 // Mount API routes
 for (const route of routes) {

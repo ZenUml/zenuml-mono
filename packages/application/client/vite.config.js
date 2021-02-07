@@ -1,10 +1,3 @@
-import vue from '@vitejs/plugin-vue'
+import { getApplicationConfiguration } from '../../../build'
 
-export default {
-  plugins: [
-    vue()
-  ],
-  build: {
-    minify: 'esbuild'
-  }
-}
+export default getApplicationConfiguration()

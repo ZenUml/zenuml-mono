@@ -1,15 +1,3 @@
-export default {
-  build: {
-    lib: {
-      entry: 'src/index.js',
-      name: 'database'
-    },
-    rollupOptions: {
-      external: [],
-      output: {
-        globals: {
-        }
-      }
-    }
-  }
-}
+// This package is intended to be used only in server-side packages
+import { getServerConfiguration } from '../../../build'
+export default getServerConfiguration()

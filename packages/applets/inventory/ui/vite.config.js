@@ -1,11 +1,3 @@
-import vue from '@vitejs/plugin-vue'
+import { getClientConfiguration } from '../../../../build'
 
-export default {
-  plugins: [vue()],
-  build: {
-    lib: {
-      entry: 'src/index.js',
-      name: 'inventory.ui'
-    }
-  }
-}
+export default getClientConfiguration()

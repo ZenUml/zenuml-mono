@@ -4,11 +4,16 @@ import { Customer } from '@vue-vite-monorepo/model'
  * Rudimentary API client based on `window.fetch`
  * @see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
  */
-export const APIClient = {
+export class APIClient {
+  constructor ({ baseUrl } = {}) {
+    if (!baseUrl) throw new Error('API base URL is required')
+    this.baseUrl = baseUrl
+  }
+
   /**
-   * API root
+   * API base URL
    */
-  baseUrl: 'http://localhost:3000',
+  baseUrl
 
   /**
    * Returns a specified customer
@@ -24,7 +29,7 @@ export const APIClient = {
       // model as on the back-end
       return new Customer(response.result.customer)
     }
-  },
+  }
 
   /**
    * Returns all customers
@@ -36,7 +41,7 @@ export const APIClient = {
     } else {
       return response.result.customers.map(customer => new Customer(customer))
     }
-  },
+  }
 
   /**
    * Runs a HTTP request with the specified parameters
@@ -44,6 +49,9 @@ export const APIClient = {
    * @param method HTTP method, default is GET
    * @param query Optional dictionary of query parameters to add to the request URL
    * @param data Optional data to submit with the request
+   * @description This also streamlines inconsistent handling of errors by window.fetch()
+   * which will throw exceptions for network errors, but won't throw for HTTP errors.
+   * Here in both cases we just return `{ error }` with other relevant details.
    */
   async request ({ path = '', method = 'get', query, data }) {
     try {
@@ -64,6 +72,7 @@ export const APIClient = {
       const response = await fetch(url, options)
       const { ok, status, statusText } = response
       const result = await response.json() || {}
+
       if (ok) {
         return { status, result }
       } else {
@@ -73,10 +82,10 @@ export const APIClient = {
     } catch (error) {
       return { path, method, error }
     }
-  },
+  }
 
   /**
-   * Trivial error handler
+   * Trivial API error handler
    */
   handleError ({ status, path, method, error }) {
     console.error(`${method} ${path} ERROR ${status}`)

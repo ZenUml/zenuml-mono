@@ -1,13 +1,9 @@
 {
   "name": "@vue-vite-monorepo/model",
-  "description": "Entity model for all packages",
+  "description": "Application entity model",
   "version": "1.0.0",
   "module": "src/index.js",
-  "main": "dist/@vue-vite-monorepo/model.umd.js",
   "scripts": {
-    "dev": "vite",
     "build": "vite build"
-  },
-  "dependencies": {
   }
 }

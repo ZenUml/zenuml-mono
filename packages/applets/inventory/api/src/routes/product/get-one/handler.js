@@ -1,11 +1,11 @@
 import { Database } from '@vue-vite-monorepo/database'
 
 export async function handler ({ params }, reply) {
-  const database = await Database.open()
+  const connection = await Database.open()
 
   try {
     const { id } = params
-    const product = await database.getProduct(id)
+    const product = await connection.getProduct(id)
 
     if (product) {
       reply
@@ -19,6 +19,6 @@ export async function handler ({ params }, reply) {
     }
 
   } finally {
-    await database.close()
+    await connection.close()
   }
 }

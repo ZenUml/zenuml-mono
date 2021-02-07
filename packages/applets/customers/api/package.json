@@ -1,12 +1,11 @@
 {
   "name": "@vue-vite-monorepo/customers.api",
   "version": "1.0.0",
-  "main": "dist/@vue-vite-monorepo/customers.api.umd.js",
   "module": "src/index.js",
   "scripts": {
     "build": "vite build"
   },
-  "devDependencies": {
+  "dependencies": {
     "@vue-vite-monorepo/utilities": "*",
     "@vue-vite-monorepo/model": "*",
     "@vue-vite-monorepo/database": "*"
