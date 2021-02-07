@@ -1,19 +1,21 @@
-import { Customer } from '@vue-vite-monorepo/model'
+import { Customer, Product } from '@vue-vite-monorepo/model'
+import { delay } from '@vue-vite-monorepo/utilities'
+import { Configuration} from './configuration'
 
 /**
  * Rudimentary API client based on `window.fetch`
  * @see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
  */
 export class APIClient {
-  constructor ({ baseUrl } = {}) {
-    if (!baseUrl) throw new Error('API base URL is required')
-    this.baseUrl = baseUrl
+  constructor ({ url } = {}) {
+    if (!url) throw new Error('API base URL is required')
+    this.url = url
   }
 
   /**
    * API base URL
    */
-  baseUrl
+  url
 
   /**
    * Returns a specified customer
@@ -44,6 +46,34 @@ export class APIClient {
   }
 
   /**
+   * Returns a specified product
+   * @param id Product identifier
+   */
+  async getProduct (id) {
+    const response = await this.request({ path: `product/${id}` })
+    if (response.error) {
+      this.handleError(response)
+    } else {
+      // We type-cast the received data, so that
+      // on the front-end we can use the exact same
+      // model as on the back-end
+      return new Product(response.result.product)
+    }
+  }
+
+  /**
+   * Returns all products
+   */
+  async getProducts () {
+    const response = await this.request({ path: 'product' })
+    if (response.error) {
+      this.handleError(response)
+    } else {
+      return response.result.products.map(product => new Product(product))
+    }
+  }
+
+  /**
    * Runs a HTTP request with the specified parameters
    * @param path Path to request, relative to {@link baseUrl}
    * @param method HTTP method, default is GET
@@ -55,10 +85,14 @@ export class APIClient {
    */
   async request ({ path = '', method = 'get', query, data }) {
     try {
+      const requestUrl = new URL(this.url + '/' + path)
+      requestUrl.search = new URLSearchParams(query).toString()
+
       const headers = {
         'Content-Type': 'application/json'
       }
-      const options = {
+
+      const requestOptions = {
         method,
         mode: 'cors',
         cache: 'no-cache',
@@ -66,10 +100,11 @@ export class APIClient {
         headers,
         body: data ? JSON.stringify(data) : undefined
       }
-      const url = new URL(this.baseUrl + '/' + path)
-      url.search = new URLSearchParams(query).toString()
 
-      const response = await fetch(url, options)
+      // A little delay, to simulate long-running operation
+      await delay(2000)
+
+      const response = await fetch(requestUrl, requestOptions)
       const { ok, status, statusText } = response
       const result = await response.json() || {}
 
@@ -91,4 +126,11 @@ export class APIClient {
     console.error(`${method} ${path} ERROR ${status}`)
     console.error(error)
   }
+}
+
+/**
+ * Returns API client instance initialized with default configuration
+ */
+export function getAPIClient () {
+  return new APIClient(Configuration.api)
 }

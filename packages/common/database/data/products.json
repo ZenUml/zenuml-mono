@@ -25,6 +25,20 @@
     "code": "DDX",
     "name": "DDX",
     "producer": "Ilford",
-    "category": "developer"
+    "category": "film developer"
+  },
+  {
+    "id": 19922238,
+    "code": "ROD",
+    "name": "Rodinal",
+    "producer": "Adox",
+    "category": "film developer"
+  },
+  {
+    "id": 19922239,
+    "code": "IHP",
+    "name": "Direct positive paper 5x7",
+    "producer": "Ilford-Harman",
+    "category": "paper"
   }
 ]

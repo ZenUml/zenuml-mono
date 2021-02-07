@@ -1,6 +1,6 @@
 {
   "name": "@vue-vite-monorepo/client",
-  "description": "Application Front-End",
+  "description": "Vue+Vite+Lerna Blueprint",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",

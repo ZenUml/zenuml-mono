@@ -1,20 +1,19 @@
 <script>
-import { ref, computed } from 'vue'
-import { now } from '@vue-vite-monorepo/utilities'
+import { ref } from 'vue'
+import { timeString } from '@vue-vite-monorepo/utilities'
 
 export default {
   setup () {
-    const time = ref(now())
-    const timeString = computed(() => time.value.toTimeString().substr(0, 8))
+    // Reactive value with current time
+    const time = ref(timeString())
 
     // Keep updating the clock every second
     setInterval(() => {
-      time.value = now()
+      time.value = timeString()
     }, 1000)
 
     return {
-      time,
-      timeString
+      time
     }
   }
 }
@@ -23,7 +22,7 @@ export default {
 
 <template>
   <footer>
-    <span class="clock">{{ timeString }}</span>
+    <span class="clock">{{ time }}</span>
   </footer>
 </template>
 

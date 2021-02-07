@@ -11,7 +11,7 @@ export class Customer {
   /**
    * Company name
    */
-  company
+  name
 
   /**
    * Person first name
@@ -27,9 +27,9 @@ export class Customer {
    * Person full name
    */
   get fullName () {
-    return [
-      this.firstName || '',
-      this.lastName || ''
-    ].join(' ')
+    const { name, firstName, lastName } = this
+    return name
+      ? name
+      : [firstName || '', lastName || ''].join(' ')
   }
 }

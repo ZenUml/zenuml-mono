@@ -8,8 +8,7 @@ export default {
     const items = [
       { name: 'home', label: 'Home' },
       { name: 'customers', label: 'Customers' },
-      { name: 'inventory', label: 'Inventory' },
-      { name: 'about', label: 'About' }
+      { name: 'inventory', label: 'Inventory' }
     ]
 
     return {
@@ -40,19 +39,21 @@ nav {
   flex: 0;
   display: flex;
   flex-direction: row;
-  padding: 8px;
+  padding: 24px;
   background-color: #1f3763;
   color: white;
 
   a {
     flex: 0;
-    margin-right: 16px;
-    color: white;
+    margin-right: 32px;
     text-decoration: none;
-    color: orange;
+    color: #dddddd;
+    font-size: 18px;
+    font-weight: 100;
+    outline: none;
 
     &:hover {
-      color: orangered;
+      color: orange;
     }
   }
 
