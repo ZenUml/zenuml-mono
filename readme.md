@@ -23,7 +23,7 @@ You only need two of these to deploy and run the application:
 * Back-end bundle found in `/packages/application/server/dist`
 * Front-end bundle found in `/packages/application/client/dist`
 
-You can run the back-end with NodeJS and serve the front-end with a web server.
+You can run the back-end with NodeJS and serve the front-end with a web server. Back-end requires installation of third-party dependencies such as `fastify` as specified in `package.json`, using `npm install`.
 
 ## Develop
 For development time you don't need to build in production mode. It's enough to open terminal and execute
