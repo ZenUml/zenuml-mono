@@ -1,7 +1,7 @@
 # Vite + Vue + Lerna Monorepo Blueprint
 Blueprint for large Vue JS projects, using the new and exciting [Vite](https://vitejs.dev) build tool and [Lerna](https://lerna.js.org) monorepo manager.
 
-## Installation
+## Install
 Initialize the project as follows:
 
     git clone https://bitbucket.org/letsdebugit/vite-monorepo-example.git
