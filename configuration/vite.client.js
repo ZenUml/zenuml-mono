@@ -12,6 +12,11 @@ export default {
     lib: {
       entry: 'src/index.js'
     },
+    external: [
+      'vue',
+      'vuex',
+      'vue-router'
+    ],
     minify: 'eslint'
   }
 }
