@@ -11,11 +11,11 @@ Initialize the project as follows:
 This downloads the project into `vite-monorepo-example` folder, installs all dependencies, prepares Lerna monorepo and creates symlinks for internal dependencies. All is now ready for build.
 
 ## Build
-Run the following to build all packages in production mode:
+Run the following to build all packages:
 
     npm run build
 
-This was a production build. In each package you will now find `/dist` folder where package code is bundled.
+This runs a production build. In each package you will now find `/dist` folder where package code is bundled.
 
 ## Run
 You only need two of these to deploy and run the application:
