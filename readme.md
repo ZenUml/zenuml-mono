@@ -44,7 +44,6 @@ It will be available at [http://localhost/3000](http://localhost/3000).
 
 # References
 * The code was originally published at my blog [Let's Debug It](https://letsdebug.it/post/12-monorepo-with-lerna-vite-and-vue).
-* Source code can be found at https://bitbucket.org/letsdebugit/vite-monorepo-example. Feel free to clone and reuse this code. Any suggestions or questions are most welcome!
 * Vite can be found at https://vitejs.dev/. Highly recommended!
 * Lerna can be found at https://lerna.js.org/.
 
