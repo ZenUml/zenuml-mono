@@ -2,10 +2,10 @@
   "name": "@vue-vite-monorepo/server",
   "description": "Application Back-End",
   "version": "1.0.0",
-  "main": "dist/@vue-vite-monorepo/server.umd.js",
+  "main": "dist/server.umd.js",
   "scripts": {
     "build": "vite build",
-    "dev": "vite build && node dist/@vue-vite-monorepo/server.umd.js"
+    "dev": "vite build && node dist/server.umd.js"
   },
   "dependencies": {
     "fastify": "^3.11.0",

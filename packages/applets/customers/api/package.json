@@ -9,5 +9,10 @@
     "@vue-vite-monorepo/utilities": "*",
     "@vue-vite-monorepo/model": "*",
     "@vue-vite-monorepo/database": "*"
+  },
+  "peerDdependencies": {
+    "fastify": "^3.11.0",
+    "fastify-cors": "^5.2.0",
+    "fastify-swagger": "^4.1.1"
   }
 }
