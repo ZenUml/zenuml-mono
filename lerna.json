@@ -1,5 +1,6 @@
 {
   "packages": [
+    "packages/miro-plugin",
     "packages/common/utilities",
     "packages/common/model",
     "packages/common/database",

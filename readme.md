@@ -41,6 +41,15 @@ To run the front-end in development mode, open another terminal and execute
 
 It will be available at [http://localhost/3000](http://localhost/3000).
 
+# Add new package
+
+```
+$ npm init vite@latest
+// or
+$ yarn create vite
+// or
+$ pnpm create vite
+```
 
 # References
 * The code was originally published at my blog [Let's Debug It](https://letsdebug.it/post/12-monorepo-with-lerna-vite-and-vue).
