@@ -10,6 +10,7 @@
     "build:client": "lerna run build --stream --scope=@vue-vite-monorepo/client",
     "build:api": "lerna run build --stream --scope=@vue-vite-monorepo/server",
     "dev:miro": "lerna run dev --stream --scope=miro-plugin",
+    "dev:tunnel": "cloudflared tunnel --url http://localhost:3001 --hostname air.zenuml.com",
     "dev:client": "lerna run dev --stream --scope=@vue-vite-monorepo/client",
     "dev:server": "lerna run dev --stream --scope=@vue-vite-monorepo/server"
   },
