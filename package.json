@@ -7,9 +7,10 @@
     "clean": "lerna clean --yes && lerna exec -- rm -rf dist",
     "refresh": "lerna bootstrap",
     "build": "lerna run build --stream",
+    "build:miro-plugin": "lerna run build --stream --scope=miro-plugin",
     "build:client": "lerna run build --stream --scope=@vue-vite-monorepo/client",
     "build:api": "lerna run build --stream --scope=@vue-vite-monorepo/server",
-    "dev:miro": "lerna run dev --stream --scope=miro-plugin",
+    "dev:miro-plugin": "lerna run dev --stream --scope=miro-plugin",
     "dev:tunnel": "cloudflared tunnel --url http://localhost:3001 --hostname air.zenuml.com",
     "dev:client": "lerna run dev --stream --scope=@vue-vite-monorepo/client",
     "dev:server": "lerna run dev --stream --scope=@vue-vite-monorepo/server"
